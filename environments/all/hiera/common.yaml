@@ -1,1 +1,19 @@
 ---
+apt::update::frequency: always
+kubernetes::master::apiserver:
+  allow_privileged: true
+  etcd_prefix: /company/kubernetes/ops
+flannel::etcd_prefix: /company/kubernetes/ops
+kubernetes::master::scheduler::master: http://127.0.0.1:8080
+kubernetes::node::kube_proxy::master: http://127.0.0.1:8080
+kubernetes::master::apiserver::service_cluster_ip_range: 10.0.3.0/24
+apt::sources:
+  'kubernetes':
+    comment: 'Kubernetes'
+    location: 'http://apt.kubernetes.io/'
+    release: 'kubernetes-xenial'
+    repos: 'main'
+    key:
+      id: 7F438280EF8D349F
+      source: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+kubernetes::client::manage_package: false

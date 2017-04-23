@@ -1,5 +1,5 @@
 Vagrant.configure("2") do |config|
-  config.vm.box = "puppetlabs/ubuntu-14.04-64-puppet"
+  config.vm.box = "puppetlabs/ubuntu-16.04-64-puppet"
 
   config.vm.network "forwarded_port", guest: 80, host: 8000
 
