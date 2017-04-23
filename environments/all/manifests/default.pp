@@ -8,18 +8,20 @@ node default {
     stage => first
   }
 
+  class { '::docker': }
+
   class { '::etcd': }
 
-  class { 'kubernetes::client': }
+  # class { 'kubernetes::client': }
 
-  class { '::kubernetes::master': }
+  # class { '::kubernetes::master': }
 
-  class { '::kubernetes::master::apiserver': }
+  # class { '::kubernetes::master::apiserver': }
 
-  class { '::kubernetes::master::scheduler': }
+  # class { '::kubernetes::master::scheduler': }
 
-  class { '::kubernetes::node': }
+  # class { '::kubernetes::node': }
 
-  class { '::kubernetes::node::kube_proxy': }
+  # class { '::kubernetes::node::kube_proxy': }
 
 }

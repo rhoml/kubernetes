@@ -1,27 +1,20 @@
 FORGE
   remote: https://forgeapi.puppetlabs.com
   specs:
-    cristifalcas-docker (5.5.0)
-      puppetlabs-stdlib (>= 4.1.0)
     cristifalcas-etcd (1.10.1)
       puppetlabs-stdlib (< 5.0.0, >= 4.6.0)
-    cristifalcas-flannel (2.0.0)
-      cristifalcas-docker (~> 5.0)
-      cristifalcas-etcd (~> 1.0)
-      puppetlabs-stdlib (< 5.0.0, >= 4.6.0)
-    cristifalcas-kubernetes (4.0.1)
-      cristifalcas-docker (~> 5.0)
-      puppetlabs-concat (~> 2.0)
-      puppetlabs-stdlib (~> 4.0)
+    garethr-docker (5.3.0)
+      puppetlabs-apt (<= 3.0.0, >= 1.8.0)
+      puppetlabs-stdlib (>= 4.1.0)
+      stahnma-epel (>= 0.0.6)
     puppetlabs-apt (3.0.0)
       puppetlabs-stdlib (< 5.0.0, >= 4.16.0)
-    puppetlabs-concat (2.2.1)
-      puppetlabs-stdlib (< 5.0.0, >= 4.2.0)
     puppetlabs-stdlib (4.16.0)
+    stahnma-epel (1.2.2)
+      puppetlabs-stdlib (>= 3.0.0)
 
 DEPENDENCIES
   cristifalcas-etcd (= 1.10.1)
-  cristifalcas-flannel (= 2.0.0)
-  cristifalcas-kubernetes (= 4.0.1)
+  garethr-docker (= 5.3.0)
   puppetlabs-apt (= 3.0.0)
 
