@@ -1,0 +1,19 @@
+FORGE
+  remote: https://forgeapi.puppetlabs.com
+  specs:
+    cristifalcas-docker (5.5.0)
+      puppetlabs-stdlib (>= 4.1.0)
+    cristifalcas-etcd (1.10.1)
+      puppetlabs-stdlib (< 5.0.0, >= 4.6.0)
+    cristifalcas-kubernetes (4.0.1)
+      cristifalcas-docker (~> 5.0)
+      puppetlabs-concat (~> 2.0)
+      puppetlabs-stdlib (~> 4.0)
+    puppetlabs-concat (2.2.1)
+      puppetlabs-stdlib (< 5.0.0, >= 4.2.0)
+    puppetlabs-stdlib (4.16.0)
+
+DEPENDENCIES
+  cristifalcas-etcd (= 1.10.1)
+  cristifalcas-kubernetes (= 4.0.1)
+
